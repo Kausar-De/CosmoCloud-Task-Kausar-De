@@ -30,6 +30,8 @@ async def create_order(order: schemas.OrderBase, db: Session = Depends(get_db)):
         if db_item.productid not in itemids:
             raise HTTPException(status_code = 404, detail = "Item of given ID not in Products!")
         val = db.query(models.Product).filter(models.Product.id == db_item.productid).first()
+        if db_item.boughtqty > val.quantity:
+            raise HTTPException(status_code = 400, detail = "Number of products exceeds stock!")
         prodtotal += val.price * db_item.boughtqty
         print(prodtotal)
     db.add(db_item)
