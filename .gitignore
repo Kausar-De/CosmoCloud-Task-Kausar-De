@@ -1,0 +1,4 @@
+venv/
+local.bat
+uvicorn.bat
+app/.env
