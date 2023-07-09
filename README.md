@@ -58,8 +58,8 @@ Similarly, quantity of product is also validated to ensure that one cannot order
 
 Upon match, value of total is dynamically calculated by multiplying price of each product (accessed via productid) by boughtquantity and adding to a variable, which is ultimately added to Total column of Order
 
+All APIs instructed in task are present in main.py
+
 # ADDENDUM
 
 I had attempted to create this project using MongoDB and succeeded in setting up a database on Atlas and performing CRUD operations. However I failed to establish the more detailed relations as I have not used any NoSQL database before this and I had some issues working with ObjectID. Due to the paucity of time my final submission was made with postgres, which I am more comfortable with, but I will share the progress I made with Mongo in the "mongo_attempt" folder
-
-All APIs instructed in task are present in main.py
